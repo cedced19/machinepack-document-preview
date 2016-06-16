@@ -1,0 +1,37 @@
+{
+  "name": "machinepack-document-preview",
+  "version": "0.0.0",
+  "description": "Generate a png from an office document or from a pdf file. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cedced19/document-preview.git"
+  },
+  "keywords": [
+    "office",
+    "pdf",
+    "png",
+    "image",
+    "picture",
+    "preview"
+  ],
+  "machinepack": {
+    "machineDir": "machines",
+    "machines": [
+      "generate"
+    ]
+  },
+  "author": "Cédric JUNG <cedced19@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cedced19/document-preview/issues"
+  },
+  "homepage": "https://github.com/cedced19/document-preview#readme",
+  "dependencies": {
+    "is-office": "0.0.0",
+    "machine": "^12.2.4"
+  }
+}
