@@ -7,8 +7,8 @@ describe('DocumentPreview Generator', function () {
 
   it('should convert a word document to a png file', function (done) {
     generate({
-      from: join(__dirname, '/files/cv-template.docx'),
-      to: join(__dirname, '/files/cv-template.png'),
+      from: join(__dirname, '/files/document.docx'),
+      to: join(__dirname, '/files/document.png'),
       mime: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
     }).exec({
 
@@ -21,7 +21,7 @@ describe('DocumentPreview Generator', function () {
       },
 
       success: function () {
-        chai.expect(join(__dirname, '/files/cv-template.png')).to.be.a.file('should have created a preview');
+        chai.expect(join(__dirname, '/files/document.png')).to.be.a.file('should have created a preview');
         done();
       }
 
