@@ -65,12 +65,12 @@ module.exports = {
        var tempPDF = '/tmp/'+ hash + '.pdf';
 
        exec('unoconv -e PageRange=1 -o ' + tempPDF + ' \"' + inputs.from + '\"', (err) => {
-         if (err) return exits.error();
+         if (err) return exits.error(err);
 
          exec('convert ' + tempPDF + '[0] \"' + inputs.to + '\"', (err) => {
-           if (err) return exits.error();
+           if (err) return exits.error(err);
            fs.unlink(tempPDF, (err) => {
-             if (err) return exits.error();
+             if (err) return exits.error(err);
              return exits.success();
            });
          });
@@ -79,7 +79,7 @@ module.exports = {
     } else if (/pdf/.test(inputs.mime)) {
 
       exec('convert \"' + inputs.from + '\"[0] \"' + inputs.to + '\"', (err) => {
-        if (err) return exits.error();
+        if (err) return exits.error(err);
         return exits.success();
       });
 

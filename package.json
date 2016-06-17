@@ -33,8 +33,6 @@
   },
   "homepage": "https://github.com/cedced19/machinepack-document-preview#readme",
   "dependencies": {
-    "chai": "^3.5.0",
-    "chai-fs": "^0.1.0",
     "is-office": "0.0.0",
     "machine": "^12.2.4"
   },
