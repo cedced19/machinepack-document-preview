@@ -67,7 +67,7 @@ module.exports = {
        exec('unoconv -e PageRange=1 -o ' + tempPDF + ' \"' + inputs.from + '\"', (err) => {
          if (err) return exits.error(err);
 
-         exec('convert ' + tempPDF + '[0] \"' + inputs.to + '\"', (err) => {
+         exec('convert  \"' + tempPDF + '\"[0] \"' + inputs.to + '\"', (err) => {
            if (err) return exits.error(err);
            fs.unlink(tempPDF, (err) => {
              if (err) return exits.error(err);
