@@ -4,6 +4,7 @@ node_js:
 before_script:
   - sudo apt-get -qq update
   # Install ImageMagick
+  - sudo apt-get install -y ghostscript
   - sudo apt-get install -y  imagemagick libssh2-1-dev libmagickcore-dev
   # Install Unoconv
   - sudo add-apt-repository ppa:libreoffice/ppa -y
