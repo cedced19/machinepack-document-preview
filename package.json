@@ -21,6 +21,7 @@
     "machine"
   ],
   "machinepack": {
+    "friendlyName": "Document Preview",
     "machineDir": "machines",
     "machines": [
       "generate"
